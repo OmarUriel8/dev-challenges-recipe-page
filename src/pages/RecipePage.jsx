@@ -31,20 +31,20 @@ export const RecipePage = () => {
 
 						<h3>{ingredients1.name}</h3>
 
-						{ingredients1.arr.map((item) => (
-							<Ingredients text={item} />
+						{ingredients1.arr.map((item,i) => (
+							<Ingredients text={item} key={i}/>
 						))}
 
 						<h3>{ingredients2.name}</h3>
 
-						{ingredients2.arr.map((item) => (
-							<Ingredients text={item} />
+						{ingredients2.arr.map((item,i) => (
+							<Ingredients text={item} key={i} />
 						))}
 
 						<h2>Instructions</h2>
 
 						{instructions.arr.map((item, i) => (
-							<Instructions text={item} num={i + 1} />
+							<Instructions text={item} num={i + 1} key={i}/>
 						))}
 					</section>
 
